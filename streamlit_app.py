@@ -35,18 +35,18 @@ def load_text(relative_path: str) -> str:
 
 def build_standalone_html() -> str:
     html = load_text("index.html")
-    css = load_text("css/style.css")
-    js = load_text("js/app.js")
+    css = load_text("style.css")
+    js = load_text("app.js")
 
     # Inline the external stylesheet
     html = html.replace(
-        '<link rel="stylesheet" href="css/style.css">',
+        '<link rel="stylesheet" href="style.css">',
         f"<style>\n{css}\n</style>",
     )
 
     # Inline the external script
     html = html.replace(
-        '<script src="js/app.js"></script>',
+        '<script src="app.js"></script>',
         f"<script>\n{js}\n</script>",
     )
 
