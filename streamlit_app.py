@@ -3,7 +3,7 @@ KhmerCrop AI · Project Control — Streamlit wrapper
 
 This app is originally a plain static HTML/CSS/JS site (see README.md).
 Streamlit Community Cloud needs a Python entry point, so this file loads
-index.html / css/style.css / js/app.js from disk, inlines the CSS and JS
+index.html / style.css / app.js from disk, inlines the CSS and JS
 into a single HTML document, and renders it inside an embedded iframe
 via streamlit.components.v1.html.
 
@@ -40,13 +40,13 @@ def build_standalone_html() -> str:
 
     # Inline the external stylesheet
     html = html.replace(
-        '<link rel="stylesheet" href="style.css">',
+        '<link rel="stylesheet" href="css/style.css">',
         f"<style>\n{css}\n</style>",
     )
 
     # Inline the external script
     html = html.replace(
-        '<script src="app.js"></script>',
+        '<script src="js/app.js"></script>',
         f"<script>\n{js}\n</script>",
     )
 
