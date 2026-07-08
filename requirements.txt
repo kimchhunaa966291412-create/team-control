@@ -1,1 +1,6 @@
-streamlit>=1.30
+streamlit_app.py
+requirements.txt
+index.html
+style.css
+app.js
+assets/favicon.svg
